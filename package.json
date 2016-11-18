@@ -1,0 +1,31 @@
+{
+  "name": "garbage-bot",
+  "version": "1.0.0",
+  "description": "A slackbot to ocassionally look for old channels to be archived.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/patricksimpson/garbage-bot.git"
+  },
+  "babel": {
+    "presets": [
+      "es2015"
+    ]
+  },
+  "author": "Patrick Simpson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/patricksimpson/garbage-bot/issues"
+  },
+  "homepage": "https://github.com/patricksimpson/garbage-bot#readme",
+  "dependencies": {
+    "slack-client": "^2.0.6"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.18.0",
+    "babel-preset-es2015": "^6.18.0"
+  }
+}
