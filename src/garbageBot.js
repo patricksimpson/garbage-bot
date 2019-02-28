@@ -26,10 +26,7 @@ bot.channels.list({exclude_archived: 1} , function(err, info) {
           if (lastDate.getTime() < archiveDate) {
             var strDate = lastDate;
             var text = linkChannel(channel.id, channel.name) + ' last message was on ' + strDate;
-            var opts = {
-              "unfurl_links": true
-            };
-            postMessage(bot, '@patrick', text);
+            postMessage(bot, '#random', text);
             badChannelCount++;
           }
         }
@@ -38,12 +35,12 @@ bot.channels.list({exclude_archived: 1} , function(err, info) {
         channel = info.channels[i];
         if (channel.num_members * 1 < 2) {
           var text = linkChannel(channel.id, channel.name) + ' has ' + channel.num_members + ' members ';
-          postMessage(bot, '@patrick',  text);
+          postMessage(bot, '#random',  text);
         }
         bot.channels.history(channel.id, {count: 1}, channelHistoryHandler(channel));
         badChannelCount++;
       }
-      postMessage(bot, '@patrick', ':dumpster: Hey there, I am going to look for some channels to clean up.');
+      postMessage(bot, '#random', ':dumpster: Hey there, I am going to look for some channels to clean up.');
    }
 });
 

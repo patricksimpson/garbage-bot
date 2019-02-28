@@ -5,10 +5,11 @@ import exists from 'node-file-exists';
 if (exists('./.env')) {
   env('./.env');
 }
+
 const postMessage = (bot, channel, msg, opts = {}) => {
   opts.as_user = true;
   var channelID = process.env.slackChannelID || ''
-   bot.chat.postMessage(channelID, msg, opts, function(err, res) {
+   bot.chat.postMessage(channel, msg, opts, function(err, res) {
     if (err) {
       console.log('Error:', err);
     } else {
