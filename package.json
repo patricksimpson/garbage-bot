@@ -27,7 +27,8 @@
   "homepage": "https://github.com/patricksimpson/garbage-bot#readme",
   "dependencies": {
     "@slack/client": "^3.6.1",
-    "dotenv": "^2.0.0"
+    "dotenv": "^2.0.0",
+    "moment": "^2.24.0"
   },
   "devDependencies": {
     "babel-cli": "^6.18.0",
